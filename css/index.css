@@ -1,0 +1,762 @@
+/* 
+   @规则   
+       @charset   设置样式表的编码
+       @import     导入其他样式文件
+       @media     媒体查询（用于对移动设备进行适配，获取分辨率之类的）
+       @font-face  自定义字体
+*/
+
+@import 'reset.css';
+
+@font-face {
+    font-family: 'iconfont';
+    src: url('../font/iconfont.eot');
+    src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'),
+        url('../font/iconfont.woff2') format('woff2'),
+        url('../font/iconfont.woff') format('woff'),
+        url('../font/iconfont.ttf') format('truetype'),
+        url('../font/iconfont.svg') format('svg');
+
+        /* 上面的src是引入字体文件 */
+ }
+
+ .iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;  
+    /* 最后两行代码是针对不同浏览器进行抗锯齿渲染的优化 */
+  }
+
+  .content{
+	background-image: url(https://gw.alicdn.com/tfs/TB1DP0yAoY1gK0jSZFMXXaWcVXa-1190-70.png);
+	width: 1200px;
+	height: 70px;
+	margin:0 auto;
+}
+
+.wrapper{
+	
+    height: 70px;
+	background-color: #f40d4d;
+}
+
+  #headMessage li{
+      float: left;
+      line-height: 35px;
+      padding: 0 6px;
+      
+  }
+
+  #headMessage li a{
+      color: #6c6c6c;
+  }
+
+  #headMessage li a.login{
+      color: #f22e00;
+  }
+
+#headMessage  span{
+      font-size: 12px;
+  }
+
+#headMessage  span.arrow{
+
+      margin-left: 7px;
+}
+
+#headMessage strong{
+    font-size: 12px;
+    color: #f22e00;
+}
+
+#headMessage a{
+    color: #9c9c9c;
+}
+
+
+#headMessage a:hover{
+    color: #f40;
+}
+
+.test{
+
+    background-color: black;
+}
+
+/* 头部搜索 */
+
+#headSearch {
+    background-color: #ffffff;
+    padding:24px 0 10px 0 ;
+}
+
+#headSearch h1{
+    display: block;
+    width: 190px;
+    height: 58px;
+    background-image: url(https://img.alicdn.com/tfs/TB1_uT8a5ERMeJjSspiXXbZLFXa-143-59.png);
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+    overflow: hidden;
+    /* 这里用到了以图换字 */
+    margin-top: 8px;
+}
+
+#headSearch .code{
+    width: 72px;
+    height: 86px;
+    border: 1px solid #eee;
+    position: relative;
+    margin-right: 110px;
+    text-align: center;
+}
+
+#headSearch .code .close{
+     position: absolute;
+     width: 14px;
+     height: 14px;
+     line-height: 14px;
+     border: 1px solid #eee;
+     left: -16px;
+     top: -1px;
+     color: #ddd;
+     cursor: pointer;
+}
+
+
+#headSearch .code img{
+    width: 62px;
+    height: 62px;
+}
+
+#headSearch .search{
+     width: 630px;
+     margin: 0 auto;
+}
+
+#headSearch .searchTab{
+    padding-left: 17px;
+    height: 22px;
+}
+#headSearch .searchTab li{
+   float: left;
+   width: 36px;
+   line-height: 22px;
+   margin-right: 4px;
+   text-align: center;
+   color: #f40;
+   cursor: pointer;
+}
+
+#headSearch .searchTab li:hover{
+    background-color: #ffeee5;
+}
+
+#headSearch .searchTab .active{
+    background-color: pink;
+    background-image: linear-gradient(to right,#ff9000,#ff5000);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffff9000', endColorstr='#ffff5000', GradientType=1);
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 6px 6px 0 0;
+    /* 这是css3新增的边框圆角样式，4个数分别代表左上角，右上角。。。顺时针顺序个边角的圆角半径 */
+}
+
+#headSearch .searchContent{
+    height: 40px;
+}
+
+#headSearch .searchBox{
+    margin: 0 auto;
+    width: 554px;
+    height: 40px;
+    box-sizing: border-box;
+    border: 2px solid #ff5000 ;
+    border-right: none;
+    border-radius: 20px 0 0 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+#headSearch .searchBox input{
+    width: 490px;
+    height: 36px;
+    line-height: 36px;
+    outline: none;    
+    /*  outline: none属性设置input输入框被点击时无效果 */
+    border: none;
+    text-indent:10px;
+    position: absolute;
+    z-index: 1;
+    background-color: transparent;
+}
+
+#headSearch .searchBox .placeholder{
+  position: absolute;
+  top: 5px;
+  left: 20px;
+}
+
+#headSearch .searchBox .placeholder i{
+    color: #9c9c9c;
+}
+
+#headSearch .searchBox .placeholder span{
+    color: #9c9c9c;
+    vertical-align: 1px;
+}
+
+
+#headSearch .imgSearch{
+    color: #9c9c9c;
+    font-size: 28px;
+    position: absolute;
+    right: 20px;
+}
+
+#headSearch button{
+    width: 74px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    border: none;
+    background-image: linear-gradient(to right,#ff9000,#ff5000);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffff9000', endColorstr='#ffff5000', GradientType=1);
+    border-radius:0 20px 20px 0 ;
+    cursor: pointer;
+}
+
+#headSearch .hotKey{
+    height: 25px;
+    line-height: 25px;
+}
+
+#headSearch .hotKey a:hover{
+   color: #f40;
+}
+
+
+/* <!-- 导航 --> */
+
+#nav h2{
+   width: 190px;
+   height: 30px;
+   line-height: 30px;
+   font-size:16px ;
+   color: #ffffff;
+   text-align: center;
+   background-color: #f50;
+}
+
+#nav ul{
+    width:calc(100% - 190px);
+    background-image: linear-gradient(to right,#ff9000,#ff5000);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffff9000', endColorstr='#ffff5000', GradientType=1);
+}
+
+#nav ul li{
+    float: left;
+    line-height: 30px;
+    margin: 0 7px;
+    font-size: 14px;
+    color: #ffffff;
+    position: relative;
+}
+
+#nav ul li.size{
+    font-size: 16px;
+}
+
+#nav ul li a{
+    color: #fff;
+    font-weight: bold;
+}
+
+#nav ul li.line{
+    margin: 0;
+    padding:0 ;
+}
+
+
+#nav ul li:hover::before{
+    content: "";
+    position: absolute;
+    width: 23px;
+    height: 13px;
+    background-image: url();
+}
+
+
+/* 首屏内容 */
+/* 侧边导航 */
+
+
+#firstScreen .firstLeft{
+  width: 890px;
+}
+
+#firstScreen  .sideNav{
+    padding: 5px 0;
+    width: 190px;
+    height: 522px;
+    background-color: #fff;
+    border: 1px solid #f50000;
+    box-sizing: border-box;
+}
+
+#firstScreen .sideNav li{
+    height: 32px;
+    line-height: 32px;
+    font-size: 14px;
+    padding-left:25px ;
+    color: #666;
+}
+
+#firstScreen .sideNav li a{
+    font-size: 14px;
+}
+
+#firstScreen .sideNav li a:hover{
+    text-decoration: underline;
+}
+
+#firstScreen .sideNav li span{
+    font-size: 12px;
+    margin-right: 5px;
+}
+
+#firstScreen .firstLeft .sideNav li:hover{
+    background-color: #ffe4dc;
+    color: #f50;
+}
+
+
+#firstScreen .firstLeft .sideNav li:hover a{
+    color: #f50;
+}
+
+
+
+/* 图片1容器 */
+#firstScreen .firstLeft .img1Box{
+    width: 690px;
+    height: 282px;
+    background-color: #eee;
+}
+
+.firstLeft .img1Box{
+    width: 690px;
+    height: 282px;
+    margin-top: 10px;
+
+}
+
+.firstLeft  .pic{
+    width: 520px;
+    position: relative;
+}
+
+.firstLeft  .pic:hover button{
+    display:block;
+
+}
+
+.firstLeft  .pic button{
+    width: 20px;
+    height:30px;
+    line-height: 30px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    background-color: rgba(0,0,0, 0.3);
+    position: absolute;
+    top: 50%;
+    margin-top: -15px;
+    display: none;
+}
+
+.firstLeft  .pic button.leftBtn{
+    left: 0;
+    border-radius: 0 15px 15px 0;
+}
+
+.firstLeft  .pic button.rightBtn{
+    right: 0;
+    border-radius:15px 0 0 15px;
+}
+
+.firstLeft  .pic .circle{
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    margin-left: -35px;
+    border-radius: 10px;
+    padding: 3px 0;
+    font-size: 0;
+    background-color:rgba(255,255,255, 0.3) ;
+}
+
+.firstLeft  .pic .circle span{
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin: 0 3px;
+    cursor: pointer;
+}
+
+.firstLeft .ad{
+    width: 160px;
+}
+
+.firstLeft .ad img{
+    width: 160px;
+}
+
+.firstLeft  .pic .circle span.active{
+    background-color:#ff5000 ;
+}
+
+/* 图片2容器 */
+#firstScreen  .img2Box{
+    width: 690px;
+    height: 220px;
+    margin-top: 10px;
+}
+
+#firstScreen  .img2Box .picTitle{
+    height: 20px;
+}
+
+#firstScreen  .img2Box .picTitle .text{
+    height: 17px;
+    line-height: 17px;
+}
+
+#firstScreen  .img2Box .picTitle .bg{
+    background-image: url("data:image/png;base64,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");
+    background-repeat: no-repeat;
+    padding-left: 136px;
+    color: #666;
+}
+
+#firstScreen  .img2Box .picTitle i{
+    color: #ff1648;
+}
+
+#firstScreen  .img2Box .line{
+    height: 3px;
+    background-color: #ff1648;
+    position: relative;
+}
+
+#firstScreen  .img2Box  .line  span{
+    width: 87px;
+    height: 3px;
+    background-color: #000;
+    position: absolute;
+    left: 0;
+}
+
+#firstScreen  .img2Box .img{
+    width: 520px;
+    height: 200px;
+    background-color: #fff;
+    position: relative;
+
+
+    display: table-cell;
+    vertical-align: middle;
+    /* display: flex;
+    justify-content: space-around;
+    align-items: center;  */
+}
+
+#firstScreen  .img2Box .img img{
+    margin: 0 10px;
+}
+
+#firstScreen  .img2Box  .ad .title{
+     height: 20px;
+     line-height: 20px;
+}
+
+/* 淘宝头条 */
+#firstScreen .news{
+    width: 890px;
+    height:100px;
+    background-color: #999;
+}
+
+/* 右边的内容 */
+#firstScreen .firstRight{
+    width: 290px;
+    /* height: 522px; */
+    margin-top: 10px;
+    background-color: #fff;
+}
+
+#firstScreen .firstRight .user{
+    height: 140px;
+    background-image: url();
+    padding-top: 5px;
+}
+
+.firstRight .user .avatar{
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    /* text-align: center; */
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.firstRight .user .avatar img{
+    width: 50px;
+    height: 50px;
+}
+
+.firstRight .user .username{
+    text-align: center;
+     line-height: 16px;
+}
+
+.firstRight .user .members{
+    text-align: center;
+    font-size: 0;
+}
+
+.firstRight .user .members a{
+    display: inline-block;
+    font-size: 12px;
+    border-radius:9px ;
+    /* background-color:#ffe4dc ; */
+    margin: 0 2px;
+    padding:0 10px 0 20px;
+}
+
+.firstRight .user .members a.gold{
+     background:#ffe4dc url(../img/taobaosmallicon.png) 0 -572px no-repeat;
+}
+
+.firstRight .user .members a.club{
+    background:#ffe4dc url(../img/taobaosmallicon.png) 0 -528px no-repeat;
+}
+
+.firstRight .btn{
+    text-align: center;
+}
+
+.firstRight .btn button.login{
+    width: 92px;
+    height: 25px;
+    margin: 12px 2px 0 2px;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    background-image: linear-gradient(to right,#ff9000,#ff5000);
+}
+
+
+.firstRight .btn button.register,
+.firstRight .btn button.shop
+{
+    width: 75px;
+    height: 25px;
+    margin: 12px 2px 0 2px;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    background-image: linear-gradient(to right,#ff9000,#ff5000);
+}
+
+
+/* 举报 */
+
+.firstRight .tipOff{
+  display: block;
+  height: 26px;
+  line-height: 26px;
+  color: #f40;
+  background-color: #ffe4dc;
+  text-align: center;
+}
+
+.firstRight .tipOff i{
+    font-size: 12px;
+    position: relative;
+    left: 30px;
+}
+
+/* 公告区 */
+.firstRight .notice{
+    height: 108px;
+    background-color: #fff;
+}
+
+.firstRight .notice .title{
+    text-align: center;
+    font-size: 0;
+    padding-top: 10px;
+}
+
+.firstRight .notice .title li{
+    display: inline-block;
+    font-size:12px;
+    line-height: 20px;
+    padding: 0 4px;
+    margin: 0 10px;
+}
+
+.firstRight .notice .title li.active{
+    font-weight: bold;
+    border-bottom: 2px solid #f40;
+}
+
+.firstRight .notice .title li a:hover{
+    color: #f40;
+}
+
+
+.firstRight .notice .noticecontent{
+    margin: 0 12px;
+    padding-top: 10px;
+}
+
+
+.firstRight .notice .noticecontent li{
+    height: 25px;
+    line-height: 25px;
+    float: left;
+    width: 130px;
+    overflow: hidden;
+}
+
+.firstRight .notice .noticecontent li a:hover{
+    color: #ff5000;
+}
+
+.firstRight .notice .noticecontent li.item1{
+    width: 100%;
+}
+
+.firstRight .notice .noticecontent li.item1 a{
+    color: #ff5000;
+}
+
+/* 图标区域 */
+
+.firstRight .icon{
+    width:100%;
+    height: 154px;
+    background-color: #fff;
+    table-layout: fixed;
+}
+
+.firstRight .icon td{
+    border: 1px solid #f4f4f4;
+    text-align: center;
+}
+
+.firstRight .icon td span{
+
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin: 0 auto;
+    background: url(../img/taobaosmallicon.png) no-repeat;
+}
+
+.firstRight .icon td i{
+    line-height: 34px;
+    color: #333;
+}
+
+.firstRight .icon .item1 span{
+    background-position:0 0;
+}
+
+.firstRight .icon .item2 span{
+    background-position:0 -87px;
+}
+
+.firstRight .icon .item3 span{
+    background-position:0 -44px;
+}
+
+.firstRight .icon .item4 span{
+    background-position:0 -132px;
+}
+
+.firstRight .icon .item5 span{
+    background-position:0 -176px;
+}
+
+.firstRight .icon .item6 span{
+    background-position:0 -220px;
+}
+
+.firstRight .icon .item7 span{
+    background-position:0 -264px;
+}
+
+.firstRight .icon .item8 span{
+    background-position:0 -308px;
+}
+
+/* APP */
+.firstRight .app{
+    padding:1px 0;
+    height: 76px;
+    background-color: #fff;
+}
+
+.firstRight .app .title{
+   height: 30px;
+   line-height: 30px; 
+}
+
+.firstRight .app .title span{
+    font-size: 12px;
+}
+
+.firstRight .app h3{
+    font-size: 14px;
+    padding-left: 14px;
+}
+
+.firstRight .app a{
+    height: 30px;
+    line-height: 30px;
+    margin-right:10px;
+}
+
+.firstRight .app a:hover{
+    color:#f40 ;
+}
+
+
+.firstRight .appIcon{
+    text-align: center;
+    font-size: 0;
+}
+
+.firstRight .appIcon li{
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    margin:0 10px 8px 10px;
+}
+
+
+.firstRight .appIcon li img{
+    width: 32px;
+    height: 32px;
+}

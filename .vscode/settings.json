@@ -1,0 +1,5 @@
+{
+    "open-in-browser.default": "Chrome",
+    "liveServer.settings.CustomBrowser": "chrome",
+    "auto-close-tag.SublimeText3Mode": true
+}
